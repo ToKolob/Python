@@ -1,0 +1,10 @@
+answer = input("Hello, welcome to a very weird story, \na kind of story you've probably never read before. \nIn this story the events will be determined by you,\nare you ready?   ")
+print ("Whatever, or you play or you close the program, \nbut cheer up, will be fun, you'll see! \n\nPlease, answer bellow words according to its verbal classification\n")
+#I added a introdution to the story and make a little change in the first verb to correspond to the narative
+adj = input ('adjective:')
+ani = input ('animal: ')
+verb1 = input ('verb in progressive (with ing in the end): ')
+exc = input ('exclamation: ')
+verb2 = input ('a second verb: ')
+verb3 = input ('a third verb: ')
+print (f'\nThe other day, I was really in trouble. It all started when I saw a very {adj.lower()} {ani.lower()} {verb1.lower()} down the hallway. "{exc.upper()}!" I yelled. But all I could think to do was to {verb2.lower()} over and over. Miraculously, that caused it to stop, but not before it tried to {verb3.lower()} right in front of my family.')

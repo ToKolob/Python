@@ -1,0 +1,2 @@
+while friend != "and":
+	friend
