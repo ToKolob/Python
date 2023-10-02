@@ -1,4 +1,7 @@
 from random import choice
+# As exceeding the Requirements I added a second prepositional phrase to the make_sentence function and a loop in the main function
+
+run_again = "y"
 
 # Function to get a determiner based on the quantity
 def get_determiner(quantity):
@@ -32,14 +35,32 @@ def get_verb(quantity, tense):
         verbs = ["will drink", "will eat", "will grow", "will laugh", "will think", "will run", "will sleep", "will talk", "will walk", "will write"]
     return choice(verbs)
 
+# Function to get a preposition randomly
+def get_preposition():
+    prepositions = [
+        "about", "above", "across", "after", "along", "around", "at", "before", "behind", "below", "beyond", "by", "despite", "except", "for", "from", "in", "into", "near", "of", "off", "on", "onto", "out", "over", "past", "to", "under", "with", "without"
+    ]
+    return choice(prepositions)
+
+# Function to get a prepositional phrase
+def get_prepositional_phrase(quantity):
+    preposition = get_preposition()
+    noun = get_noun(quantity)
+    determiner = get_determiner(quantity)
+    prepositional_phrase = f"{preposition} {determiner} {noun}"
+    return prepositional_phrase
+
 # Function to make a sentence based on the quantity and tense
 def make_sentence(quantity, tense):
     determiner = get_determiner(quantity)
     noun = get_noun(quantity)
     verb = get_verb(quantity, tense)
-    sentence = f"{determiner} {noun} {verb}."
+    prepositional_phrase = get_prepositional_phrase(quantity)    
+    prepositional_phrase2 = get_prepositional_phrase(quantity)
+    sentence = f"{determiner} {noun} {prepositional_phrase} {verb} {prepositional_phrase2}."
     return sentence.capitalize()
 
+# The main function do not need explanations, ;) 
 def main():
     quantity = [1,2]
     verb_tenses = ["past", "present", "future"]
@@ -47,4 +68,6 @@ def main():
         for tense in verb_tenses:
             print(make_sentence(quantity, tense))
 
-main()
+while run_again == "y":
+    main()
+    run_again = input("Do you want to run the program again? (y/n)") or "y"
