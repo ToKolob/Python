@@ -138,7 +138,16 @@ def print_marriages(marriages_dict, people_dict):
             person_key: [name, gender, birth_year, death_year]
     Return: nothing
     """
-    pass
+    print ('Marriages')
+    for marriage, marriage_list in marriages_dict.items():
+        husband = people_dict[marriages_dict[marriage][0]]
+        wife = people_dict[marriages_dict[marriage][1]]
+        wedding_year = marriages_dict[marriage][2]
+        print(f"{husband[0]} {wedding_year - husband[2]} > {wedding_year} < {wife[0]} {wedding_year - wife[2]}")
+
+
+        
+
 
 
 # If this file was executed like this:
