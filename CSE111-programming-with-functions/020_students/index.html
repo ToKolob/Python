@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: calc(100% - 16px);
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .invalid {
+      border: 1px solid #ff5555 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <button type="button" onclick="validateForm()">Enviar</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+
+      // Reset previous invalid states
+      nameInput.classList.remove('invalid');
+      emailInput.classList.remove('invalid');
+
+      // Validate Name
+      if (nameInput.value.trim() === '') {
+        nameInput.classList.add('invalid');
+        alert('O campo de nome não pode estar vazio.');
+        return;
+      }
+
+      // Validate Email
+      if (emailInput.value.trim() === '' || !emailInput.value.includes('@')) {
+        emailInput.classList.add('invalid');
+        alert('O campo de email não pode estar vazio e deve conter pelo menos um caracter "@".');
+        return;
+      }
+
+      // If all validations pass, you can proceed with form submission or any other action
+      alert('Formulário enviado com sucesso!');
+    }
+  </script>
+
+</body>
+</html>
+
