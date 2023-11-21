@@ -2,6 +2,10 @@ import csv
 # Import the datetime class from the datetime
 # module so that it can be used in this program.
 from datetime import datetime
+# Call the now() method to get the current
+# date and time as a datetime object from
+# the computer's operating system.
+current_date_and_time = datetime.now()
 
 def read_dictionary(filename, key_column_index):
   """Read the contents of a CSV file into a compound
@@ -46,20 +50,23 @@ def main():
     
     print("\n")
     print(f"Number of Items: {number_of_items}")
-    print(f"Subtotal: {subtotal:.2f}")
+
+    # If the current day of the week is Tuesday or Wednesday, apply a 10% discount.
+    if datetime.now().weekday() == 1 or datetime.now().weekday() == 2:
+      print("You get a 10% discount!")
+      subtotal = subtotal * 0.9
+      print(f"Subtotal: {subtotal:.2f}")    
+    else:
+      print(f"Subtotal: {subtotal:.2f}")
+      
     print(f"Sales Tax: {subtotal * 0.06:.2f}")
     print(f"Total: {subtotal * 1.06:.2f}")
     print()
     print("Thanks for shopping at the Inkom Emporium!")
       
-    # Call the now() method to get the current
-    # date and time as a datetime object from
-    # the computer's operating system.
-    current_date_and_time = datetime.now()
-
     # Use an f-string to print the current
     # day of the week and the current time.
-    print(f"{current_date_and_time:%a %b   %d %I:%M:%S %Y}")
+    print(f"{current_date_and_time:%a %b   %d %H:%M:%S %Y}")
 
   except KeyError as e:
     print(f"Error: unknown product ID in request.csv file, {e}")
