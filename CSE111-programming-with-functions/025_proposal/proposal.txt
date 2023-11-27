@@ -1,0 +1,51 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+
+Pomodoro's schedule
+
+2. What real-world problem will your program address or help to solve?
+
+I am planning to create a program that integrates the Pomodoro technique with a task agenda. The aim is to monitor and manage my goals effectively, providing notifications when the set time for completing an objective is reached. Additionally, I intend to implement a feature to store data in a MySQL server, incorporate a budget tracking system, and potentially integrate the program into a website. Currently, I rely on multiple programs for these tasks, but I believe it would be fantastic to consolidate all these functionalities into my own custom program.
+
+3. What will you learn from developing this program?
+
+I will learn how to integrate MySQL and manage data in Python, explore new libraries, create an interface with Tkinter, implement the Pomodoro technique, possibly utilizing the Data library. Additionally, I'll gain insights into developing a budget tracking system. In fact, this project will provide me with a wealth of knowledge, maybe I start learning Django.
+
+4. What Python modules will your program use?
+
+Probably, I will use pymysql, datetime, asyncio, tkinter.
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+5. Will you separate your Python program into functions that each
+perform a single task?
+
+Yes, It is necessary.
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+6. Will you write test functions to test at least two of your program
+functions?
+
+Yes, I will.
+
