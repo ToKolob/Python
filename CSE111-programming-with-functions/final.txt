@@ -1,0 +1,19 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+The functions are a strong instrument to build programs organized and reutilizeble. This week I helped a friend who is studying C, I was shocked to realize that C do not have objects!  Imagine what would be python without functions? A big maze of variables and loops.
+
+
+
+2. In your judgment, what is the value of test functions?
+
+Test functions help us to code clear and prepare our program to be refacted in the future, they also help us to test our code, see problems and fix them.
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+First I run the program, then see the error message and search on the internet for the cause and a possible solution, When I feel really lost I ask for an AI to explain the code to me, but I do not like to ask for it to write the code, most of the time the AI make the code even more confused, I try to understand the logic and start to make tests in small junks of code if it works then I pass to the program with the problem. Maybe I lost too much time to understand the problem, I could fix everything using functions already done on the internet.
